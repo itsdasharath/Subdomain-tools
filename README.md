@@ -6,19 +6,19 @@
 subD.py is a Python script that performs subdomain enumeration for a given domain. It utilizes threading to efficiently discover subdomains by sending HTTP requests to potential subdomains and checking their availability. The script provides a fast and comprehensive list of active subdomains associated with the target domain.
 
 ## Features
-- Subdomain enumeration using threading for concurrency.
-- Fast and efficient discovery of active subdomains.
-- User-friendly output format.
-- Easy integration with custom subdomain wordlists.
+- Fast subdomain enumeration using threading.
+- Option to use custom wordlists or default wordlist.
+- Handles errors related to missing or unreadable wordlists.
+- User-friendly and flexible command-line interface.
 
 ## Installation
 1. Clone the repository:
     ```shell
-    git clone https://github.com/your-username/subD.py.git
+    git clone https://github.com/itsdasharath/Subdomain-tools.git
     ```
 2. Navigate to the project directory:
     ```shell
-    cd subD.py
+    cd Subdomain-tools
     ```
 3. Install the required dependencies:
     ```shell
@@ -27,13 +27,17 @@ subD.py is a Python script that performs subdomain enumeration for a given domai
 
 ## Usage
 1. Prepare your subdomain wordlist (if not using the default one):
-    - Add your wordlist to the `wordlists/` directory or specify its path when prompted.
+    -specify its path when prompted.
 
 2. Run the script:
     ```shell
-    python subD.py
+    python subD.py -d example.com 
     ```
-    - You will be prompted to enter the target domain. The script will then enumerate subdomains and output the discovered ones.
+    - Replace example.com with your target domain and custom_wordlist.txt with your wordlist. If the custom wordlist is not available, you'll be prompted to use the default wordlist.
+
+## Option
+- `-d` or `--domain`: Specify the target domain.{required}
+- `-w` or `--wordlist`: Specify the path to the custom wordlist. {optional: default wordlist will be used if not provided}
 
 
 ## License
